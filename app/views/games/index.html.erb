@@ -1,2 +1,7 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
+<h1>Games</h1>
+
+<% @games.each do |game| %>
+  <p>
+    <%= game.id %> <%= link_to(game.user.name, game_path(game.id)) %>
+  </p>
+<% end %>

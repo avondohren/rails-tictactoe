@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   
   def edit
     authorize
-    if current_user.username == params[:id]
+    if current_user.id == params[:id]
       @user = User.find(params[:id])
     else
       flash[:notice] = "Cannot edit another person's profile."
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
   def update
     authorize
-    if current_user.username == params[:id]
+    if current_user.id == params[:id]
       user = User.find(params[:id])
       user.update_attributes(params[:user])
       flash[:notice] = "Profile saved."
@@ -49,9 +49,10 @@ class UsersController < ApplicationController
 
   def destroy
     authorize
-    if current_user.username == params[:id]
+    if current_user.id == params[:id]
       user = User.find(params[:id])
       user.delete
+      session[:user_id] = nil
       flash[:notice] = "User #{user.uname} has beed deleted."
     else
       flash[:notice] = "Cannot delete another person's profile."
