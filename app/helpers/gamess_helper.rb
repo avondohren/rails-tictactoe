@@ -1,0 +1,2 @@
+module GamessHelper
+end
