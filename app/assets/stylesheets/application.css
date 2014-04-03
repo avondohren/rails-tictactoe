@@ -11,3 +11,24 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  background-color: #3000f2;
+  background-image: url(http://www.transparenttextures.com/patterns/subtle-stripes.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color: white;
+  font-family: 'Sofadi One', cursive;
+ }
+ 
+#container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
+}
+
+#greeting {
+  float: right;
+}
