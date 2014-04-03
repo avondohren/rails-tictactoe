@@ -1,8 +1,16 @@
+#games #gameInfo {
+  width: 15%;
+  float: left;
+}
+
 #games #board {
   width: 132px;
   height: 132px;
   position: relative;
   background-color: black;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 #games .square {
@@ -15,4 +23,12 @@
   margin: 2px;
   position: relative;
   cursor: pointer;
+}
+
+#games h5 {
+  margin-top: -20px;
+}
+
+#games #savegame {
+  clear: both;
 }
