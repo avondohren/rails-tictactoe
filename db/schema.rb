@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20140402202356) do
 
   create_table "games", :force => true do |t|
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "board"
     t.boolean  "won"
     t.string   "winner"
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(:version => 20140402202356) do
     t.string   "fname"
     t.string   "lname"
     t.string   "uname"
-    t.string   "passworddigest"
+    t.string   "password_digest"
     t.string   "email"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

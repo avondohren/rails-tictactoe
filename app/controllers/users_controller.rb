@@ -24,8 +24,8 @@ class UsersController < ApplicationController
   def create
     user = User.new(params[:user])
     
-    if @user.save
-      flash[:notice] = "Welcome #{@user.fname}!"
+    if user.save
+      flash[:notice] = "Welcome #{user.fname}!"
       session[:user_id] = user.id # "auto-login"
       redirect_to(user_path(user.id))
     else

@@ -5,3 +5,6 @@
     <%= game.id %> <%= link_to(game.user.name, game_path(game.id)) %>
   </p>
 <% end %>
+<p>
+  <%= link_to("New Game", games_path(current_user.id), :method=> :post) %>
+</p>

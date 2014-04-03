@@ -1,4 +1,18 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+#games #board {
+  width: 132px;
+  height: 132px;
+  position: relative;
+  background-color: black;
+}
+
+#games .square {
+  background-color: white;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  float: left;
+  color: green;
+  margin: 2px;
+  position: relative;
+  cursor: pointer;
+}

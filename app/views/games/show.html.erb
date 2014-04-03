@@ -1,1 +1,37 @@
-<h1>Game <%= @game.id %></h1>
+<h1>Tic Tac Toe</h1>
+<h5>Game <%= @game.id %></h5>
+  
+<h3>Current Player:</h3>
+<p id="player">X</p>
+
+<div id="board">
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+  <h1 class="square"></h1>
+</div>
+
+<%= form_for @game, :html => {:id => "savegame"} do |f| %>
+  <p>
+    board
+    <%= f.text_field :board %>
+  </p>
+  <p>
+    user_id
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    won
+    <%= f.check_box :won %>
+  </p>
+  <p>
+    winner
+    <%= f.text_field :winner %>
+  </p>
+  <%= f.submit %>
+<% end %>
