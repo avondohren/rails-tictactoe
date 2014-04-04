@@ -2,30 +2,20 @@
 <html>
 <head>
   <title>Rails Tic-Tac-Toe</title>
-  <link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body id="<%= params[:controller] %>">
   <!-- If a flash message is provided, display it. -->
-  <div id="container">
-    <div>
-      <p id="greeting">
-      <% if current_user %>
-        Welcome, <%= current_user.fname %>! <%= link_to("Log Out", login_path(session[:user_id]), :method => :delete) %>
-      <% else %>
-        <%= link_to("Sign In", :new_login) %>
-      <% end %>
-      </p>
-    <% if flash[:notice] || flash[:alert] %>
-      <div id="flash">
-        <p id="notice"><%= flash[:notice] %></p>
-        <p id="alert"><%= flash[:alert] %></p>
-      </div>
-    <% end %>
+  <% if flash[:notice] || flash[:alert] %>
+    <div id="flash">
+      <p id="notice"><%= flash[:notice] %></p>
+      <p id="alert"><%= flash[:alert] %></p>
+    </div>
+  <% end %>
 
-    <%= yield %>
-  </div>
+  <%= yield %>
+
 </body>
 </html>
