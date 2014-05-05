@@ -1,5 +1,5 @@
-# Tic-Tac-Toe
-# Rails and JavaScript addition
+## Tic-Tac-Toe
+### Rails and JavaScript addition
 
 This project was created to test our skill with JavaScript. I created this as part of the curriculum for 
 Omaha Code School.
